@@ -1,0 +1,43 @@
+<h2>Adicionar Novo Livro</h2>
+
+<%= form_for @livro do |f| %>
+
+	<div class="form-group">
+		<%= f.label :title %><br />
+		<%= f.text_field :title, class:'form-control' %><br />
+	</div>
+
+	<div class="form-group">
+		<%= f.label :autor %><br />
+		<%= f.select :autor_id, Autor.all.collect {|x| [x.first_name + ' '+ x.last_name, x.id]}, {:include_blank => 'Selecione o autor'},class:'form-control' %><br /><br />
+	</div>
+
+	<div class="form-group">
+		<%= f.label :format %><br />
+		<%= f.text_field :format ,class:'form-control' %><br />
+	</div>
+
+	<div class="form-group">
+		<%= f.label :year %><br />
+		<%= f.text_field :year ,class:'form-control' %><br />
+	</div>
+
+	<div class="form-group">
+		<%= f.label :excerpt %><br />
+		<%= f.text_area :excerpt ,class:'form-control' %><br />
+	</div>
+
+	<div class="form-group">
+		<%= f.label :pages %><br />
+		<%= f.number_field :pages ,class:'form-control' %><br />
+	</div>
+
+	<div class="form-group">
+		<%= f.label :amount %><br />
+		<%= f.number_field :amount ,class:'form-control' %><br />
+	</div>
+
+	<%= f.submit "Submit", class:'btn btn-primary' %>
+	<%=link_to "Cancel", livros_path, class:'btn btn-default' %>
+
+<% end %>

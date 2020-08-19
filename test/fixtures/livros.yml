@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  author_id: 1
+  price: MyString
+  publication: 2020-08-17
+  excerpt: MyText
+  format: MyString
+  pages: 1
+
+two:
+  title: MyString
+  author_id: 1
+  price: MyString
+  publication: 2020-08-17
+  excerpt: MyText
+  format: MyString
+  pages: 1

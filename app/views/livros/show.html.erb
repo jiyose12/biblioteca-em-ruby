@@ -1,0 +1,20 @@
+<div id="books-show">
+	<h2><%= @livro.title %></h2>
+	<div class="livros-show-left">
+		<%= image_tag(@livro.img) %>
+	</div>
+	<div class="books-show-right">
+		<h3>Livro :</h3>
+		<ul>
+			<li><strong>Autor:</strong> <%= @livro.autor.first_name %> <%= @livro.autor.last_name %></li>
+			<li><strong>Quantidade:</strong> <%= @livro.amount %></li>
+			<li><strong>Ano:</strong> <%= @livro.year %></li>
+			<li><strong>Formato:</strong> <%= @livro.format %></li>
+			<li><strong>Paginas:</strong> <%= @livro.pages %></li>
+		</ul>
+		<%=link_to "Pedir emprestado", class:'btn btn-success',target:'_blank' %>
+	</div>
+	<div class="clearfix"></div>
+	<h4>Resumo</h4>
+	<p><%= @livro.excerpt %></p>
+</div>
